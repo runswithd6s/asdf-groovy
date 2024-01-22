@@ -7,3 +7,7 @@ if [[ ! ("${ASDF_GROOVY_DISABLE_JAVA_HOME_EXPORT:-}" = true) ]]; then
     export JAVA_HOME
   fi
 fi
+
+if [ -n "$ASDF_INSTALL_PATH" ]; then
+  export GROOVY_HOME="$ASDF_INSTALL_PATH"
+fi
